@@ -26,6 +26,7 @@ cache:
     - $TRAVIS_BUILD_DIR/target
 
 before_script:
+  - lld --version
   - rustup component add rust-src
   - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
   - (test -x $HOME/.cargo/bin/xargo || cargo install xargo)
